@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Sample</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+		<div class="container">
+			<form class="form-horizontal" id="form">
+				<fieldset>
+					<h4>Please fill out all fields below</h4><hr>
+					<div class="grey-form col-lg-6">
+						<div class="form-group">
+							<label for="inputPONumber" class="col-lg-4 control-label">PO Number:</label>
+							<div class="col-lg-8">
+								<input type="text" name="inputPONumber" class="form-control" id="inputPONumber" placeholder="PO number">
+							</div>
+						</div>
+		
+						<div class="form-group">
+							<label for="inputJobName" class="col-lg-4 control-label">Job Name:</label>
+							<div class="col-lg-8">
+								<input type="text" name="inputJobName" class="form-control" id="inputJobName" placeholder="Job name">
+							</div>
+						</div>
+    
+						<div class="form-group">
+							<label for="inputJobDescription" class="col-lg-4 control-label">Job Description:</label>
+							<div class="col-lg-8">
+								<textarea name="inputJobDescription" class="form-control" rows="3" id="inputJobDescription" placeholder="Enter description of the job"></textarea>
+							</div>
+						</div>
+		
+						<div class="form-group">
+							<label for="inputQuantityNeeded" class="col-lg-4 control-label">Quantity Needed:</label>
+							<div class="col-lg-8">
+								<input type="number" name="inputQuantityNeeded" class="form-control" id="inputQuantityNeeded" placeholder="Quantity needed">
+							</div>
+						</div>
+		
+						<!-- Date Submitted is not displayed on the page, since it should be hidden per project requirements. However, it can be found by inspecting the element in Dev Tools.  -->
+						<input type="hidden" class="form-control" id="dateSubmitted" value="">
+						<script type="text/javascript">
+							document.getElementById('dateSubmitted').value = Date();
+						</script>
+		
+						<div class="form-group">
+							<label for="inputDateNeeded" class="col-lg-4 control-label">Date Needed:</label>
+							<div class="col-lg-8">
+								<input type="date" name="inputDateNeeded" class="form-control" id="inputDateNeeded">
+							</div>
+						</div>
+		
+						<div class="form-group">
+							<label for="fileAttachment" class="col-lg-4 control-label">File attachment:</label>
+							<div class="col-lg-8">
+								<input type="file" name="fileAttachment" class="file" id="fileAttachment">
+							</div>
+						</div>
+    
+						<div class="form-group">
+							<div class="col-lg-8 col-lg-offset-4">
+								<button type="reset" class="btn btn-default">Cancel</button>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+					</div><!-- end of grey-form -->
+				</fieldset>
+			</form>
+		</div><!-- end of container -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+		
+  </body>
+</html>

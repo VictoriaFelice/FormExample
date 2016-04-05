@@ -1,3 +1,4 @@
+$('#postresult').hide();
 $("#form").validate({
 	rules: {
 		inputPONumber : {
@@ -18,7 +19,7 @@ $("#form").validate({
   },
 	//set error messages for the fields
   messages: {
-		inputPONumber: "Enter PO Number",
+		inputPONumber: "Enter PO number",
     inputJobName: "Enter job name",
     inputJobDescription: "Enter job description",
 		inputQuantityNeeded: "Enter quantity needed",
@@ -27,5 +28,6 @@ $("#form").validate({
   //set submit handler for the form
   submitHandler: function(form) {
     form.submit();
+		$("#processing").append("Your request is being processed...");
   }
 });
